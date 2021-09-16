@@ -13,7 +13,7 @@ class CreateMainsTable extends Migration
      */
     public function up()
 {
-    Schema::create('main', function (Blueprint $table) {
+    Schema::create('mains', function (Blueprint $table) {
         $table->id();
         $table->string('category');
         $table->string('title');
