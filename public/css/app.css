@@ -32137,7 +32137,7 @@ select {
 }
 
 body {
-  background-color: black !important;
+  background-color: pink ;
 }
 
 @media (min-width: 640px) {

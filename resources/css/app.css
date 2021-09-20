@@ -3,5 +3,6 @@
 @import 'tailwindcss/utilities';
 
 body {
-    background-color: black !important;
+    background-color: lightblue;
 }
+

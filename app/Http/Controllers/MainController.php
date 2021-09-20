@@ -11,7 +11,7 @@ class MainController extends Controller
 
         $posts = Main::all();
 
-        return view('main', ['mains' => $posts]);
+        return view('main', ['posts' => $posts]);
     }
 
 
