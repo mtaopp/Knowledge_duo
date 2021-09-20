@@ -19,6 +19,9 @@ Route::get('/', 'PostController@showAll');
 Route::post('/create', 'PostController@create');
 Route::get('/posts/{id}', 'PostController@view');
 Route::delete('/posts/{id}', 'PostController@delete');
+
+
+
 Route::get('/', 'PostController@search')->name('search');
 
 
@@ -34,7 +37,6 @@ Route::get('/register', [RegisteredUserController::class, 'create'])
 
 Route::post('/register', [RegisteredUserController::class, 'store'])
                 ->middleware('guest');
-
 
 
 
