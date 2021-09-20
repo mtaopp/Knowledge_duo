@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', 'MainController@showAll');
+Route::get('/', 'PostController@showAll');
+Route::post('/create', 'PostController@create');
+Route::get('/posts/{id}', 'PostController@view');
+Route::delete('/posts/{id}', 'PostController@delete');
+Route::get('/', 'PostController@search')->name('search');
 
 
 
@@ -24,7 +28,12 @@ Route::get('/', 'MainController@showAll');
 
 
 
+Route::get('/register', [RegisteredUserController::class, 'create'])
+                ->middleware('guest')
+                ->name('register');
 
+Route::post('/register', [RegisteredUserController::class, 'store'])
+                ->middleware('guest');
 
 
 
