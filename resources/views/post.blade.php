@@ -37,7 +37,7 @@
 
 
         <li class="{{ $post->category }} posted">
-            <b><h2><a href="/posts/{{$post->id}}">{{$post->title}} created by: <strong>{{$post->author}}</strong></a></b></h2><br>
+            <b><h2><a href="/posts/{{$post->id}}">{{$post->title}} created by: <strong>{{$post->author}}</strong></a></b></h2>
             {{$post->description}}<br>
             {{$post->created_at->diffForHumans()}}<br>
         </li><br>
