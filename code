@@ -1,0 +1,57 @@
+<script>
+ let categories = [];
+    let links = []
+
+ let posted = document.querySelectorAll(".posted")
+
+ //console.log(posted);
+
+ posted.forEach(posts=> {
+     let fart = posts.className.split(' ')
+    //console.log(fart[0]);
+
+    if(!categories.includes(fart[0])) {
+    categories.push(fart[0])
+    }
+
+    fart[0] = []
+
+    links.push(fart[0])
+
+ });
+
+
+    //console.log(posts.innerHTML);
+
+
+    let bubble = document.createElement('div')
+    bubble.classList.add("categories")
+
+    //console.log(categories)
+
+    categories.forEach(category => {
+    let div = document.createElement('div')
+    div.classList.add(category)
+
+    let a = document.createElement('a')
+
+
+    a.innerHTML ;
+
+
+    div.appendChild(a)
+
+
+
+    bubble.appendChild(div);
+    console.log(bubble);
+
+
+    document.getElementById('right').innerHTML = ""
+    document.getElementById('right').appendChild(bubble)
+
+});
+
+
+
+</script>

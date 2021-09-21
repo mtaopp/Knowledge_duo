@@ -5,7 +5,6 @@
 @section('content')
 
 
-
 <?php
     if(isset($_GET['submit'])) {
 ?>
@@ -31,23 +30,25 @@
 
 
 
-<hr>
-
-<br>
-<h1><strong>Posts</strong></h1>
 <br>
 
 <ul>
     @foreach ($posts as $post)
-        <li>
-            <b><a href="/posts/{{$post->id}}">{{$post->title}}:</a></b><br>
+
+
+        <li class="{{ $post->category }} posted">
+            <b><h2><a href="/posts/{{$post->id}}">{{$post->title}} created by: <strong>{{$post->author}}</strong></a></b></h2><br>
             {{$post->description}}<br>
-            {{$post->content}}<br>
-            created by: <strong>{{$post->author}}</strong>
             {{$post->created_at->diffForHumans()}}<br>
         </li><br>
     @endforeach
 </ul>
 
 
+
 @endsection
+
+
+
+
+
