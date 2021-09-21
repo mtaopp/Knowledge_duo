@@ -2,12 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 body, html {
     width: 100%;
     background-color: beige;
     height: 100%;
-
-
+    margin: 0;
+    padding: 0;
 }
 
 .disabled {
@@ -19,33 +20,65 @@ body, html {
     display: block;
 }
 
+div, form {
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-
+    flex-direction: row;
 }
 
 #left {
-    flex-grow: 1.5;
+    flex-grow: 1;
     background-color: green;
     max-width: 20%;
     min-height: 100vh;
 }
 
+#left .wrapper {
+    flex-flow: column;
+}
+.form form {
+    margin: 4rem 2rem;
+}
+
+#left input {
+    max-width: 13rem;
+}
+
+#intro {
+    margin: 4rem 2rem;
+}
+
 #right {
-    flex: 7;
+    flex-grow: 7;
     background-color: rgb(163, 28, 156);
     min-height: 100vh;
 }
 
 #logo {
-    width: 250px;
+    max-height: 5rem;
 }
 
-#topic {
-    width: 40%;
+#logo img {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+
+}
+
+footer {
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: chartreuse;
+    text-align: center;
+    padding: 1rem;
 }
 
 
@@ -61,15 +94,22 @@ body, html {
     #left {
         min-width: 100%;
         max-height: 5%;
+        min-height: 5%;
     }
 
-    footer {
-        position:fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: chartreuse;
-        text-align: center;
+    #left .wrapper {
+        flex-flow: row;
+        justify-content: space-between !important;
+    }
+
+    #left .form {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #logo img {
+        width: 150px;
+        margin: 0;
     }
   }
 
@@ -80,6 +120,22 @@ body, html {
     }
 
     #left {
-        min-width: 100%u;
+        min-width: 100%;
+        max-height: 3%;
+        min-height: 3%;
+    }
+
+    #left .wrapper {
+        flex-flow: row;
+        justify-content: space-between !important;
+    }
+
+    #logo img {
+        width: 80px;
+        margin: 0;
+    }
+
+    #left input {
+        max-width: 100px;
     }
   }

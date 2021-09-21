@@ -12,11 +12,26 @@
 
     <div class="container1">
         <div class="wrapper">
-            <div id="left"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolorum perferendis illum saepe repudiandae expedita accusantium hic aperiam odit alias, quaerat tempora deleniti deserunt facere quibusdam quis sed facilis ut. Dolor provident modi debitis!</p>
-            <a href="">Logo</a>
-            <footer><b>Cheese footer</b></footer>
+            <div id="left">
+                <div class="wrapper">
+                    <div id="logo">
+                        <img src="/img/baYs9AuHxx9QXeYBiMvSLU-1200-80.jpg" alt="">
+                    </div>
+                    <div class="form">
+                        <form action="{{ route('search') }}" method="GET">
+                            <input type="text" name="search" required/>
+                            <button name="submit" class="inline-flex items-center px-4 py-2 mx-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Search</button>
+                        </form>
+                    </div>
+
+                <div id="intro"><p>Welcome to Knowledge Tree. This space was created to offer beginners a brief insight into the foundation stones of various web development tools and technologies. Take your time, stay awhile, and, most importantly, enjoy yourself as you learn.</div>
+                    <footer><b>Cheese footer</b><a href="/dashboard" id="login" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Login</a>
+
+                    </footer>
+
+                </div>
             </div>
-            <div id="right">asdsaddas</div>
+            <div id="right"> ghjg</div>
         </div>
 
     </div>
