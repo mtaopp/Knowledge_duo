@@ -2,11 +2,84 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body {
+body, html {
+    width: 100%;
     background-color: beige;
+    height: 100%;
+
+
 }
 
 .disabled {
     display: none;
+}
+
+.container1 {
+    width: 100%;
+    display: block;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
 
 }
+
+#left {
+    flex-grow: 1.5;
+    background-color: green;
+    max-width: 20%;
+    min-height: 100vh;
+}
+
+#right {
+    flex: 7;
+    background-color: rgb(163, 28, 156);
+    min-height: 100vh;
+}
+
+#logo {
+    width: 250px;
+}
+
+#topic {
+    width: 40%;
+}
+
+
+@media only screen and (max-width: 860px) {
+    body {
+      background-color: rgb(170, 19, 82);
+    }
+
+    .flex-container1 {
+        display: block;
+    }
+
+    #left {
+        min-width: 100%;
+        max-height: 5%;
+    }
+
+    footer {
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: chartreuse;
+        text-align: center;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    body {
+      background-color: rgb(5, 207, 163);
+    }
+
+    #left {
+        min-width: 100%u;
+    }
+  }
